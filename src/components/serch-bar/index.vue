@@ -2,24 +2,23 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-11-30 11:13:08
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-11-30 17:03:29
+ * @LastEditTime: 2022-12-03 11:38:27
  * @FilePath: \lagou-demo\src\components\serch-bar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="bg-box">
-    <div class="serch-box">
-        <input type="text" placeholder="搜索职位、公司或地点" @focus="showList(true)" @blur="showList(false)">
-        <button type="button" class="layui-btn layui-btn-lg">搜索</button>
-        <div class="recommend-serch" v-if="state">
-            <p class="rec-title">猜你要搜</p>
-            <ul class="rec-names" v-for="title in recommendList" :key="title.index">
-                <li><a href="#">{{title}}</a></li>
-            </ul>
+    <div class="bg-box">
+        <div class="serch-box">
+            <input type="text" placeholder="搜索职位、公司或地点" @focus="showList(true)" @blur="showList(false)">
+            <button type="button" class="layui-btn layui-btn-lg">搜索</button>
+            <div class="recommend-serch" v-if="state">
+                <p class="rec-title">猜你要搜</p>
+                <ul class="rec-names" v-for="title in recommendList" :key="title.index">
+                    <li><a href="#">{{title}}</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
-  </div>
 </template>
 
 <script>
@@ -31,20 +30,22 @@ export default {
             isShowList: false,
         }
     },
+    
     methods: {
         showList(state) {
             if (state) {
             this.state = state
             } else {
-            if(this.isShowList){
-                this.isShowList = false
-                this.$refs.focus()
-            }else {
-                this.state = state
+                if(this.isShowList){
+                    this.isShowList = false
+                    this.$refs.focus()
+                }else {
+                    this.state = state
+                }
             }
-            }
-      },
-    }
+        },
+   },
+
 }
 </script>
 
@@ -108,4 +109,5 @@ export default {
     background-color: #00b38a;
     color: #fff;
 }
+
 </style>

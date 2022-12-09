@@ -67,6 +67,7 @@ export default {
 }
 .content-box {
     position: absolute;
+    z-index: 1;
     left: 30%;
     top: 15%;
     width: 650px;

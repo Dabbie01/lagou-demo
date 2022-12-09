@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-11-21 17:09:38
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-11-30 16:05:02
+ * @LastEditTime: 2022-11-30 17:16:44
  * @FilePath: \lagou-demo\src\components\nav-bar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,6 +12,9 @@
       <ul class="layui-nav" lay-filter="">
         <li class="layui-nav-item left"><a href="https://www.lagou.com/" class="logo"><img src="https://lagou-zhaopin-fe.lagou.com/fed/lg-www-fed/image/20210624/1624523613071.png" alt=""></a></li>
         <li class="layui-nav-item left"><span class="city" @click.stop="citySelect">{{thisCity}}<i class="layui-icon layui-icon-triangle-d"></i></span></li>
+        <li class="layui-nav-item left layui-this">
+          <router-link to="/" active-class="current">首页</router-link>
+        </li>
         <li class="layui-nav-item left" v-for="(i, index) in navItems" :key="index">
           <router-link :to="i.url" active-class="current">{{i.name}}</router-link>
         </li>
@@ -54,7 +57,6 @@ export default {
       osUrl: 'https://easy.lagou.com/dashboard/index.htm?from=c_index',
       resumeUrl: 'https://www.lagou.com/resume/myresume.html',
       navItems: [
-          {name: '首页', url: '/'},
           {name: '职位', url: '/job'},
           {name: '公司', url: '/company'},
           {name: '校园', url: '/university'},
