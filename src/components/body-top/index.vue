@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-12-03 12:12:16
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-12-07 16:01:18
+ * @LastEditTime: 2022-12-14 16:33:09
  * @FilePath: \lagou-demo\src\components\body-top\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -27,8 +27,8 @@
                         <hr class="hr-dotted">
                         <div class="panel-footer">
                             <a href="#"><img :src="data.url"></a>
-                            <div class="footer-right">
-                                <p class="company"><a href="#">{{data.company}}</a></p>
+                            <div class="footer">
+                                <p class="company"><a href="#" style="color:#00b38a">{{data.company}}</a></p>
                                 <p>{{data.detail}}</p>
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                         <hr class="hr-dotted">
                         <div class="panel-footer">
                             <a href="#"><img :src="data.url"></a>
-                            <div class="footer-right">
-                                <p class="company"><a href="#">{{data.company}}</a></p>
+                            <div class="footer">
+                                <p class="company"><a href="#" style="color:#00b38a">{{data.company}}</a></p>
                                 <p>{{data.detail}}</p>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                         <hr class="hr-dotted">
                         <div class="panel-footer">
                             <a href="#"><img :src="data.url"></a>
-                            <div class="footer-right">
-                                <p class="company"><a href="#">{{data.company}}</a></p>
+                            <div class="footer">
+                                <p class="company"><a href="#" style="color:#00b38a">{{data.company}}</a></p>
                                 <p>{{data.detail}}</p>
                             </div>
                         </div>
@@ -418,6 +418,7 @@ export default {
     font-size: 16px;
     border: 1px solid rgb(209, 203, 203);
     border-radius: 4px;
+    color: #999;
 }
 .wordcut {
     overflow: hidden;
@@ -436,15 +437,16 @@ export default {
     width: 50px;
     height: 50px;
 }
-.footer-right {
+.footer {
     float: left;
     margin-left: 20px;
     font-size: 18px;
 }
-.footer-right p {
+.footer p {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    color: #999;
 }
 .layui-tab-content .a-link {
     display: block;
@@ -454,7 +456,8 @@ export default {
     font-size: 20px;
     text-align: center;
     margin: 20px auto;
-    border: 2px solid rgb(209, 203, 203);
+    border: 2px solid #00b38a;
+    color: #00b38a;
 }
 .layui-tab-content .a-link:hover {
     color: #fff;

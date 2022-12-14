@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-12-07 11:08:32
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-12-07 15:12:55
+ * @LastEditTime: 2022-12-14 12:23:59
  * @FilePath: \lagou-demo\src\components\body-middle\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -165,6 +165,9 @@ export default {
 .panel .footer .footer-left {
     border-right: 1.5px solid #999;
 }
+.footer .number a {
+    color: #00b38a;
+}
 .footer p a {
     color: #999;
 }
@@ -186,7 +189,8 @@ export default {
     font-size: 20px;
     text-align: center;
     margin: 20px auto;
-    border: 2px solid rgb(209, 203, 203);
+    border: 2px solid #00b38a;
+    color: #00b38a;
 }
 .layui-tab-content .a-link:hover {
     color: #fff;

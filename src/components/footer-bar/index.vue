@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-12-07 17:39:56
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-12-09 11:29:07
+ * @LastEditTime: 2022-12-14 12:22:08
  * @FilePath: \lagou-demo\src\components\footer-bar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,7 +10,7 @@
   <div class="footer-box">
     <div class="part-one">
         <div class="left">
-            <a class="download" :href="aUrl"><i class="layui-icon layui-icon-cellphone"></i> 下载拉勾APP
+            <a class="download" :href="aUrl"><i class="layui-icon layui-icon-cellphone" style="font-weight:600"></i> 下载拉勾APP
             <img :src="appUrl" class="qr-code-app"></a>
             <br>
             <a class="wechat"><i class="layui-icon layui-icon-link"></i> &nbsp;微信小程序
@@ -158,14 +158,14 @@ export default {
 .left .wechat {
     display: block;
     background-color: #fff;
-    border: 1px solid rgb(99, 93, 93);
+    border: 2px solid #00b38a;
     width: 220px;
     height: 50px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 10px;
     font-size: 18px;
-    color: rgb(99, 93, 93);
+    color: #00b38a;
 }
 .left .download:hover,
 .left .wechat:hover {
@@ -281,7 +281,7 @@ export default {
 .rocket .toTop {
     position: fixed;
     right: 50px;
-    bottom: 150px;
+    bottom: 140px;
     cursor: pointer;
 }
 .rocket .toTop i {
