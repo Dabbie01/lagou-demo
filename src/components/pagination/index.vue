@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-12-13 17:24:18
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-12-14 11:56:40
+ * @LastEditTime: 2022-12-15 16:05:16
  * @FilePath: \lagou-demo\src\components\pagination\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -131,7 +131,7 @@ export default {
 .item:first-child {
   margin: 0 5px 0 0;
 }
-.item .page-disable {
+.page-disable {
   color: silver !important;
   cursor: default !important;
 }
