@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-11-21 17:09:38
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-12-16 11:47:46
+ * @LastEditTime: 2022-12-16 12:17:00
  * @FilePath: \lagou-demo\src\components\nav-bar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,22 +10,43 @@
   <div>
     <div class="box">
       <ul class="layui-nav" lay-filter="">
-        <li class="layui-nav-item left"><a href="https://www.lagou.com/" class="logo"><img src="https://lagou-zhaopin-fe.lagou.com/fed/lg-www-fed/image/20210624/1624523613071.png" alt=""></a></li>
-        <li class="layui-nav-item left"><span class="city" @click.stop="citySelect">{{thisCity}}<i class="layui-icon layui-icon-triangle-d"></i></span></li>
-        <li class="layui-nav-item left layui-this">
-          <router-link to="/" active-class="current">首页</router-link>
-        </li>
-        <li class="layui-nav-item left" v-for="(i, index) in navItems" :key="index">
-          <router-link :to="i.url" active-class="current">{{i.name}}</router-link>
+        <li class="layui-nav-item left">
+          <a href="https://www.lagou.com/" class="logo"
+            ><img
+              src="https://lagou-zhaopin-fe.lagou.com/fed/lg-www-fed/image/20210624/1624523613071.png"
+              alt=""
+          /></a>
         </li>
         <li class="layui-nav-item left">
-          <a :href="appUrl" class="app-color"><i class="layui-icon layui-icon-cellphone"></i> 拉勾APP</a>
+          <span class="city" @click.stop="citySelect"
+            >{{ thisCity }}<i class="layui-icon layui-icon-triangle-d"></i
+          ></span>
+        </li>
+        <li class="layui-nav-item left layui-this">
+          <router-link to="/" exact tag="a" active-class="current">首页</router-link>
+        </li>
+        <li
+          class="layui-nav-item left"
+          v-for="(i, index) in navItems"
+          :key="index"
+        >
+          <router-link :to="i.url" exact tag="a" active-class="current">{{
+            i.name
+          }}</router-link>
+        </li>
+        <li class="layui-nav-item left">
+          <a :href="courseUrl" target="_blank">课程</a>
+        </li>
+        <li class="layui-nav-item left">
+          <a :href="appUrl" class="app-color" target="_blank"
+            ><i class="layui-icon layui-icon-cellphone"></i> 拉勾APP</a
+          >
         </li>
         <li class="layui-nav-item right">
-          <a :href="osUrl">进入企业版</a>
+          <a :href="osUrl" target="_blank">进入企业版</a>
         </li>
         <li class="layui-nav-item right">
-          <a href="">我</a>
+          <a href="javascript:;">我</a>
           <dl class="layui-nav-child">
             <dd><a href="javascript:;">账号设置</a></dd>
             <dd><a href="javascript:;">退出</a></dd>
@@ -39,7 +60,9 @@
           <div class="layui-card" v-show="divVisible">
             <div class="layui-card-header">消息通知</div>
             <div class="layui-card-body">暂时没有新的消息~</div>
-            <div class="card-footer"><a href="" class="msg-all">查看全部消息</a></div>
+            <div class="card-footer">
+              <a href="" class="msg-all">查看全部消息</a>
+            </div>
           </div>
         </li>
       </ul>
@@ -49,35 +72,35 @@
 </template>
 
 <script>
-import citySelect from '@/components/city-select'
+import citySelect from "@/components/city-select";
 export default {
-  data(){
+  data() {
     return {
-      appUrl: 'https://help.lagou.com/staticpage/app_download/pc/index.html',
-      osUrl: 'https://easy.lagou.com/dashboard/index.htm?from=c_index',
-      resumeUrl: 'https://www.lagou.com/resume/myresume.html',
+      courseUrl: "https://kaiwu.lagou.com/",
+      appUrl: "https://help.lagou.com/staticpage/app_download/pc/index.html",
+      osUrl: "https://easy.lagou.com/dashboard/index.htm?from=c_index",
+      resumeUrl: "https://www.lagou.com/resume/myresume.html",
       navItems: [
-          {name: '职位', url: '/job'},
-          {name: '公司', url: '/company'},
-          {name: '课程', url: '/cource'}
-        ],
-        divVisible: false,
-        cityVisible: false,
-        thisCity: '北京站',
-    }
+        { name: "职位", url: "/job" },
+        { name: "公司", url: "/company" },
+      ],
+      divVisible: false,
+      cityVisible: false,
+      thisCity: "北京站",
+    };
   },
   methods: {
-    msgOn(){
-      this.divVisible = !this.divVisible
+    msgOn() {
+      this.divVisible = !this.divVisible;
     },
-    citySelect(){
-      this.cityVisible = !this.cityVisible
+    citySelect() {
+      this.cityVisible = !this.cityVisible;
     },
   },
   components: {
     citySelect,
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -85,26 +108,26 @@ export default {
   padding: 0%;
   margin: 0%;
 }
-  .layui-nav {
-    padding: 0 100px;
-  }
-  .layui-nav,
-  li {
-    background: #32373e;
-    height: 60px;
-    margin-right: 20px;
-  }
-  li a,
-  li span,
-  i {
-    line-height: 60px;
-    font-size: 20px;
-  }
-  .logo img {
-      height: 20px;
-    }
-  .layui-nav .layui-nav-item .city,
-  .layui-nav .layui-nav-item .app-color {
+.layui-nav {
+  padding: 0 100px;
+}
+.layui-nav,
+li {
+  background: #32373e;
+  height: 60px;
+  margin-right: 20px;
+}
+li a,
+li span,
+i {
+  line-height: 60px;
+  font-size: 20px;
+}
+.logo img {
+  height: 20px;
+}
+.layui-nav .layui-nav-item .city,
+.layui-nav .layui-nav-item .app-color {
   color: #0dca9f;
 }
 .layui-nav .layui-nav-item .city:hover,
@@ -129,6 +152,7 @@ export default {
   width: 600px;
   height: 200px;
   border: 2px solid #1f1818;
+  z-index: 1;
 }
 .layui-card-header {
   padding: 0%;
@@ -158,5 +182,11 @@ export default {
 }
 .card-footer .msg-all:hover {
   color: #000;
+}
+.current {
+  color: #fff !important;
+  border-bottom: 2px solid #00b38a;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
