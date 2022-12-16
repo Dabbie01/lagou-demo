@@ -12,7 +12,6 @@ import Company from '@/views/Company'
 import Cource from '@/views/Cource'
 import Index from '@/views/Index'
 import Job from '@/views/Job'
-import University from '@/views/University'
 
 Vue.use(Router)
 
@@ -36,11 +35,6 @@ const routes = [
         path: '/job',
         name: 'Job',
         component: Job
-      },
-      {
-        path: '/university',
-        name: 'University',
-        component: University
       },
 ]
 

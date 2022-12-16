@@ -2,7 +2,7 @@
  * @Author: Dabbie 2310734576@qq.com
  * @Date: 2022-11-21 17:09:38
  * @LastEditors: Dabbie 2310734576@qq.com
- * @LastEditTime: 2022-11-30 17:16:44
+ * @LastEditTime: 2022-12-16 11:47:46
  * @FilePath: \lagou-demo\src\components\nav-bar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -59,12 +59,11 @@ export default {
       navItems: [
           {name: '职位', url: '/job'},
           {name: '公司', url: '/company'},
-          {name: '校园', url: '/university'},
           {name: '课程', url: '/cource'}
         ],
         divVisible: false,
         cityVisible: false,
-        thisCity: '长沙站',
+        thisCity: '北京站',
     }
   },
   methods: {
@@ -93,6 +92,7 @@ export default {
   li {
     background: #32373e;
     height: 60px;
+    margin-right: 20px;
   }
   li a,
   li span,
