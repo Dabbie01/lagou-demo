@@ -85,7 +85,7 @@ npm run lint
 <br>
 ├── jsconfig.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;# JavaScirpt项目根目录
 <br>
-├── package-lock.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp # package-lock.json
+├── package-lock.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # package-lock.json
 <br>
 ├── package.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;# package.json
 <br>
